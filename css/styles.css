@@ -1,0 +1,153 @@
+/* ==========================================================================
+   VARIABLES Y ESTILOS DE ARQUITECTURA
+   ========================================================================== */
+:root {
+    --bg-main: #090a0f;
+    --bg-surface: #0f111a;
+    --bg-card: #161925;
+    --border-color: #1e2235;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --text-muted: #4a5568;
+    --accent-cyan: #00f2fe;
+    --accent-coral: #ff5e62;
+    --sidebar-width: 280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg-main); color: var(--text-primary); font-family: system-ui, sans-serif; overflow-x: hidden; }
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+/* SIDEBAR RESTRUCTURADO */
+.sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-color);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.pulse-dot { width: 8px; height: 8px; background: var(--accent-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--accent-cyan); }
+.brand h2 { font-size: 18px; }
+.brand h2 span { color: var(--accent-cyan); }
+.sidebar-desc { color: var(--text-secondary); font-size: 13px; line-height: 1.5; }
+.matrix-menu { display: flex; flex-direction: column; gap: 8px; }
+.menu-item { color: var(--text-secondary); text-decoration: none; padding: 12px; border-radius: 6px; font-size: 14px; display: block; }
+.menu-item.active, .menu-item:hover { background: var(--bg-card); color: #fff; }
+.sidebar-footer { margin-top: auto; font-size: 11px; color: var(--text-muted); font-family: monospace; }
+
+/* PANEL DE CONTENIDO PRINCIPAL */
+.content-display { padding: clamp(20px, 4vw, 45px); width: 100%; }
+.content-block { margin-bottom: 60px; }
+.indexer { font-family: monospace; color: var(--accent-cyan); font-size: 12px; }
+h1 { font-size: clamp(22px, 3vw, 32px); margin: 5px 0 20px 0; }
+.panel-box { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+
+/* ==========================================================================
+   SOLUCIÓN DEFINITIVA: CONTROL DE IMÁGENES ANTI-RECORTE
+   ========================================================================== */
+.image-container-block {
+    width: 100% !important;
+    height: auto !important;
+    background: #06070a;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container-block img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important; /* Muestra toda la imagen sin cortar bordes */
+    display: block;
+}
+
+.image-container-mini {
+    width: 100% !important;
+    height: auto !important;
+    background: #06070a;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 8px;
+}
+.image-container-mini img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* ==========================================================================
+   COMPONENTES FUNCIONALES EN VIVO
+   ========================================================================== */
+.live-simulator, .metrics-dashboard-interactive { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; margin: 20px 0; }
+.simulator-tag { font-family: monospace; color: var(--accent-cyan); font-size: 11px; }
+
+.simulator-controls, .dashboard-tabs { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
+.sim-btn, .tab-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+.sim-btn.active, .tab-btn.active { background: rgba(0, 242, 254, 0.1); border-color: var(--accent-cyan); color: #fff; }
+
+.sim-display { background: var(--bg-main); border: 1px solid var(--border-color); padding: 15px; text-align: center; border-radius: 6px; }
+.counter-display { font-size: 32px; font-weight: bold; font-family: monospace; display: block; transition: opacity 0.15s ease; }
+.sim-stat small { color: var(--text-muted); font-size: 12px; }
+
+.metrics-visual { display: flex; flex-direction: column; gap: 15px; }
+.bar-container { background: var(--bg-main); height: 8px; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+.bar-fill { height: 100%; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease; }
+
+/* FILAS DE DATOS Y COLUMNAS PILARES */
+.data-row, .accordion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.data-stat, .accordion-item { background: var(--bg-surface); border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; }
+.data-stat span { font-size: 12px; color: var(--text-secondary); }
+.data-stat p { font-size: 24px; font-weight: bold; margin-top: 5px; font-family: monospace; }
+
+.accordion-item { display: flex; gap: 15px; }
+.acc-num { color: var(--accent-cyan); font-family: monospace; font-size: 20px; font-weight: bold; }
+.acc-text h3 { font-size: 16px; margin-bottom: 5px; }
+.acc-text p { font-size: 13px; color: var(--text-secondary); line-height: 1.4; }
+
+/* INTERACCIÓN HOVER CPC */
+.cpc-interactive { position: relative; overflow: hidden; cursor: help; }
+.cpc-interactive:hover .cpc-value { transform: translateY(-100%); opacity: 0; }
+.cpc-interactive::after { content: attr(data-compare); position: absolute; bottom: 20px; left: 20px; font-size: 24px; font-weight: bold; color: var(--accent-coral); font-family: monospace; opacity: 0; transform: translateY(100%); transition: all 0.2s ease; }
+.cpc-interactive:hover::after { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   RESPONSIVE GLOBAL INTELIGENTE (MÓVIL UNIVERSAL)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .dashboard-container { grid-template-columns: 1fr; }
+    .sidebar { height: auto; position: relative; width: 100%; padding: 15px; border-right: none; border-bottom: 1px solid var(--border-color); }
+    .sidebar-desc, .sidebar-footer { display: none; }
+    .matrix-menu { flex-direction: row; justify-content: space-between; }
+    .menu-item { flex: 1; text-align: center; font-size: 12px; padding: 8px; }
+}
+
+@media (max-width: 576px) {
+    .matrix-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+    .menu-item span { display: none; }
+    .simulator-controls, .dashboard-tabs { flex-direction: column; }
+    .sim-btn, .tab-btn { width: 100%; text-align: center; }
+    .data-row, .accordion-grid { grid-template-columns: 1fr; }
+}

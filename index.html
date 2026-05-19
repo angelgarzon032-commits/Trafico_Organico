@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tráfico Orgánico - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="pulse-dot"></div>
+                <h2>TRAFICO<span>.ORGANICO</span></h2>
+            </div>
+            
+            <p class="sidebar-desc">Centro de control analítico para estrategias de optimización en motores de búsqueda.</p>
+            
+            <nav class="matrix-menu">
+                <a href="#def" class="menu-item active"><span>01</span> Definición</a>
+                <a href="#pil" class="menu-item"><span>02</span> Arquitectura</a>
+                <a href="#met" class="menu-item"><span>03</span> Métricas clave</a>
+                <a href="#keywords" class="menu-item"><span>04</span> Palabras clave</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Status: Optimizado</p>
+                <p>v2.6 // HTML, CSS & JS</p>
+            </div>
+        </aside>
+
+        <main class="content-display">
+            
+            <section id="def" class="content-block">
+                <div class="block-header">
+                    <span class="indexer">// SECCIÓN 01</span>
+                    <h1>¿Qué es el Tráfico Orgánico?</h1>
+                </div>
+                
+                <div class="image-container-block">
+                    <img src="img/trafico.png" alt="Gráfico analítico de crecimiento orgánico">
+                </div>
+
+                <div class="panel-box">
+                    <p>Es la métrica que define a los usuarios que ingresan a un activo digital de forma <strong>autónoma y natural</strong>. Ocurre cuando el algoritmo de un motor de búsqueda indexa tu contenido, lo procesa como la mejor respuesta posible a una duda, y el usuario decide hacer clic sin intermediación de pautas publicitarias.</p>
+                </div>
+
+                <div class="live-simulator">
+                    <span class="simulator-tag">// SIMULACIÓN DE TRÁFICO EN VIVO</span>
+                    <p>Interactúa con las posiciones de búsqueda para calcular la estimación de clics:</p>
+                    <div class="simulator-controls">
+                        <button type="button" class="sim-btn active" data-visitas="3,950">Top 1 (CTR ~39%)</button>
+                        <button type="button" class="sim-btn" data-visitas="1,820">Top 3 (CTR ~18%)</button>
+                        <button type="button" class="sim-btn" data-visitas="210">Top 10 (CTR ~2%)</button>
+                    </div>
+                    <div class="sim-display">
+                        <div class="sim-stat">
+                            <span id="counter-display" class="counter-display">3,950</span>
+                            <small>Visitas Estimadas / Mes</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-row">
+                    <div class="data-stat cpc-interactive">
+                        <span>Costo por Clic</span> 
+                        <p class="cpc-value" data-compare="Vs. $2.50 en Ads">$0.00</p>
+                    </div>
+                    <div class="data-stat"><span>Intención</span> <p>Muy Alta</p></div>
+                </div>
+            </section>
+
+            <section id="pil" class="content-block">
+                <div class="block-header">
+                    <span class="indexer">// SECCIÓN 02</span>
+                    <h1>Pilares del Sistema</h1>
+                </div>
+                <div class="accordion-grid">
+                    
+                    <div class="accordion-item">
+                        <div class="acc-num">A</div>
+                        <div class="acc-text">
+                            <h3>On-Page Optimization</h3>
+                            <p>Contenido semántico estructurado, densidad inteligente de palabras clave y etiquetas meta precisas.</p>
+                            <div class="image-container-mini">
+                                <img src="img/onpage.jpg" alt="Esquema SEO On-Page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="acc-num">B</div>
+                        <div class="acc-text">
+                            <h3>Infraestructura Técnica</h3>
+                            <p>Velocidad de carga crítica, renderizado eficiente y adaptabilidad móvil impecable.</p>
+                            <div class="image-container-mini">
+                                <img src="img/tecnico.jpg" alt="Optimización de código y velocidad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="acc-num">C</div>
+                        <div class="acc-text">
+                            <h3>Señales de Autoridad</h3>
+                            <p>Perfil de enlaces salientes y entrantes (backlinks) que validan la confianza de la plataforma.</p>
+                            <div class="image-container-mini">
+                                <img src="img/red.jpg" alt="Red de enlaces entrantes">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="met" class="content-block">
+                <div class="block-header">
+                    <span class="indexer">// SECCIÓN 03</span>
+                    <h1>Rendimiento a Largo Plazo</h1>
+                </div>
+                
+                <div class="metrics-dashboard-interactive">
+                    <div class="dashboard-tabs">
+                        <button type="button" class="tab-btn active" data-channel="organic">Canal Orgánico</button>
+                        <button type="button" class="tab-btn" data-channel="ads">Canal Pautado (Ads)</button>
+                    </div>
+
+                    <div class="metrics-visual">
+                        <div class="metric-bar-group">
+                            <label>Conversión Estructurada</label>
+                            <div class="bar-container"><div id="bar-1" class="bar-fill" style="width: 85%; background-color: #00f2fe;"></div></div>
+                        </div>
+                        <div class="metric-bar-group">
+                            <label>Retorno de Inversión (ROI)</label>
+                            <div class="bar-container"><div id="bar-2" class="bar-fill" style="width: 92%; background-color: #00f2fe;"></div></div>
+                        </div>
+                        <div class="metric-bar-group">
+                            <label>Estabilidad del Flujo</label>
+                            <div class="bar-container"><div id="bar-3" class="bar-fill" style="width: 95%; background-color: #00f2fe;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-container-block">
+                    <img src="img/panel.png" alt="Panel de analítica avanzada">
+                </div>
+            </section>
+
+            <section id="keywords" class="content-block">
+                <div class="block-header">
+                    <span class="indexer">// SECCIÓN 04</span>
+                    <h1>Palabras Clave Clave Estratégicas</h1>
+                </div>
+                <div class="panel-box">
+                    <p>Las palabras clave (Keywords) representan las intenciones de búsqueda de los usuarios. Dirigir la optimización hacia los términos correctos garantiza capturar el tráfico con mayor probabilidad de conversión.</p>
+                </div>
+                <div class="data-row">
+                    <div class="data-stat">
+                        <span>Keyword Principal</span>
+                        <p style="font-size: 18px; color: #00f2fe; margin-top: 10px;">Tráfico Orgánico</p>
+                    </div>
+                    <div class="data-stat">
+                        <span>Intención de Búsqueda</span>
+                        <p style="font-size: 18px; margin-top: 10px;">Informativa / Comercial</p>
+                    </div>
+                </div>
+                <div class="data-row" style="margin-top: 20px;">
+                    <div class="data-stat">
+                        <span>Términos Secundarios</span>
+                        <p style="font-size: 14px; color: #a0aec0; font-family: monospace; line-height: 1.8; margin-top: 10px;">
+                            • qué es tráfico orgánico seo<br>
+                            • cómo aumentar visitas orgánicas<br>
+                            • posicionamiento web natural<br>
+                            • optimización en motores de búsqueda
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Lógica del Simulador de Posiciones (Sección 01)
+        const simButtons = document.querySelectorAll('.sim-btn');
+        const counterDisplay = document.getElementById('counter-display');
+
+        simButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                simButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Efecto de parpadeo al actualizar datos
+                counterDisplay.style.opacity = '0.3';
+                setTimeout(() => {
+                    counterDisplay.textContent = button.getAttribute('data-visitas');
+                    counterDisplay.style.opacity = '1';
+                }, 150);
+            });
+        });
+
+        // 2. Lógica del Cambiador de Métricas (Sección 03)
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const bar1 = document.getElementById('bar-1');
+        const bar2 = document.getElementById('bar-2');
+        const bar3 = document.getElementById('bar-3');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const channel = button.getAttribute('data-channel');
+
+                if (channel === 'organic') {
+                    bar1.style.width = '85%';
+                    bar1.style.backgroundColor = '#00f2fe';
+                    bar2.style.width = '92%';
+                    bar2.style.backgroundColor = '#00f2fe';
+                    bar3.style.width = '95%';
+                    bar3.style.backgroundColor = '#00f2fe';
+                } else {
+                    bar1.style.width = '40%';
+                    bar1.style.backgroundColor = '#ff5e62';
+                    bar2.style.width = '55%';
+                    bar2.style.backgroundColor = '#ff5e62';
+                    bar3.style.width = '15%';
+                    bar3.style.backgroundColor = '#ff5e62';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
